@@ -1,5 +1,4 @@
 * { 
-    /* padding: 0; */
     margin: 0;
     box-sizing: border-box;
     font-family: "Jost", sans-serif;
@@ -39,12 +38,6 @@ body {
     padding: 20px 18%;
     transition: 0.3s;
 }
-
-/* .header h2 {
-    padding: 10px
-    font-size: 19px;
-    font-weight: 500; 
-} */
 
 .logo img {
     width: 200px;
@@ -104,7 +97,6 @@ body {
 
 .top-btn:hover {
     transform: scale(1.1);
-    /* background: var(--main-color); */
     background:  #e1dfdb;
     border: 2px solid rgba(195,123,83,154);
 }
@@ -163,8 +155,7 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* background: rgb(198, 195, 211); */
-    background:  #e1dfdb;;
+    background:  #e1dfdb;
     font-size: 17px;
     color: black;
     margin-right: 22px;
@@ -196,6 +187,7 @@ section {
 .mycomputer {
     width: 400px;
     height: auto;
+    border-radius: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease; 
 }
@@ -236,7 +228,7 @@ header.sticky {
 .project-img {
     width: 400%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 40px;
     overflow: hidden;
     flex: 0 1 calc(33.33% - 20px); 
     position: relative;
@@ -261,20 +253,126 @@ header.sticky {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* font-size: 50px; */
-    opacity: 10%;
-    transition: opacity 0.4s;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(195,123,83,154);
+    text-align: center; 
+    opacity: 0; 
 }
+
+
 .project-img ,
 .project-text {
-    opacity: 4;
+    opacity: 8;
 }
 
 .project-img a {
     display: block;
     margin-top: 10px;
     text-decoration: none;
-    color:  rgba(195,123,83,154);
-    font-weight: 500;
-    font-size: 50px;
+    color: black;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.contact {
+    width: 64%;
+    margin: 100px auto;
+    padding: 70px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 35px;
+    background-image: url(../com1.png);
+    background-size: cover;
+}
+
+.center h3 {
+    color:  white;
+    font-size: 22px;
+    padding: 20px;
+}
+
+.contact .action form input[type="email"]{
+    max-width: 100%;
+    width: 470px;
+    padding: 12px 15px;
+    background: #a09dab;
+    color: #000;
+    border: none;
+    outline: none;
+    margin: 0 10px 20px 0;
+    border-radius: 30px;
+}
+
+.contact .action form input[type="submit"]{
+    padding: 12px 40px;
+    background: rgba(195,123,83,154);
+    color: #000;
+    border: none;
+    outline: none;
+    margin: 0 10px 20px 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.ends {
+    text-align: center;
+    padding: 40px;
+}
+
+.ends p {
+    color: rgba(195,123,83,154);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 1425px) {
+    .header {
+        padding: 16px 3%;
+        transition: 0.3s;
+    }
+    .section {
+        padding: 70px 3%;
+        transition: 0.3s;
+    }
+
+    .projects {
+        width: 90%;
+        padding: 50px 3%;
+        transition: 0.3s;
+    }
+    .contact {
+        width: 95%;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: 950px) {
+    #menu-icon {
+        display: block;
+    }
+    .home {
+        min-height: 80vh;
+    }
+    .navlist {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: right;
+        transition: all 0.4s;
+        background-color: #a09dab;
+    }
+    .navlist a {
+        display: block;
+        padding: 1.2rem;
+        margin: 1.5rem;
+        border-right: 2px solid rgba(195,123,83,154);
+    }
+    .navlist a:hover {
+        background: #e1dfdb;
+        color: var(--main-color);
+    }
 }
